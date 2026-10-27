@@ -1,0 +1,20 @@
+[package]
+name = "renamebot"
+version = "0.3.0"
+edition = "2021"
+
+[dependencies]
+grammers-client = "=0.7.0"
+grammers-session = "=0.7.0"
+grammers-tl-types = "=0.7.0"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "io-util", "sync", "time", "fs", "process", "signal"] }
+anyhow = "1"
+dotenvy = "0.15"
+log = "0.4"
+env_logger = "0.11"
+image = { version = "0.25", default-features = false, features = ["png", "jpeg", "webp", "gif", "bmp", "tiff"] }
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+strip = true

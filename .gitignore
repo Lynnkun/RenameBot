@@ -1,0 +1,6 @@
+/target
+*.session
+dump.chat
+.env
+.env.example
+.env.local
